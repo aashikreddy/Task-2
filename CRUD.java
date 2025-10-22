@@ -43,9 +43,9 @@ public class CRUD {
             System.out.println("5. DELETE");
             System.out.println("0. EXIT");
             System.out.print("Enter your choice: ");
-            int choice = sc.nextInt();
+            int ch = sc.nextInt();
 
-            switch (choice) {
+            switch (ch) {
                 case 1:
                     System.out.print("Enter Student ID: ");
                     int sid = sc.nextInt();
@@ -55,7 +55,7 @@ public class CRUD {
                     System.out.print("Enter Student Marks: ");
                     double smarks = sc.nextDouble();
                     c.add(new Students(sid, sname, smarks));
-                    System.out.println("Student added successfully!");
+                    System.out.println("✅ Student added successfully!");
                     break;
 
                 case 2:
@@ -103,7 +103,7 @@ public class CRUD {
                         }
                     }
                     if (found)
-                        System.out.println("Record updated successfully!");
+                        System.out.println("✅ Record updated successfully!");
                     else
                         System.out.println("Record Not Found");
                     System.out.println("-----------------------------");
@@ -122,26 +122,26 @@ public class CRUD {
                         }
                     }
                     if (found)
-                        System.out.println("Record deleted successfully!");
+                        System.out.println("✅ Record deleted successfully!");
                     else
                         System.out.println("Record Not Found");
                     System.out.println("-----------------------------");
                     break;
 
                 case 0:
-                    System.out.println("Exiting... Thank you for using the system!");
+                    System.out.println("👋 Exiting... Thank you for using the system!");
                     sc.close();
                     return;
 
                 default:
-                    System.out.println("Invalid choice! Please enter a valid option.");
+                    System.out.println("⚠️ Invalid choice! Please enter a valid option.");
             }
 
             System.out.print("\nDo you want to continue? (y/n): ");
             cont = sc.next().charAt(0);
         }
 
-        System.out.println("Program terminated. Goodbye!");
+        System.out.println("👋 Program terminated. Goodbye!");
         sc.close();
     }
 }
